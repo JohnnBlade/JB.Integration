@@ -27,11 +27,11 @@ namespace JB.Integration.Api
                 context.UseSqlServer(connString);
             });
 
-            services.AddAuthentication()
-                .AddCookie(options => {
-                    options.LoginPath = "/Account/Unauthorized/";
-                    options.AccessDeniedPath = "/Account/Forbidden/";
-                });
+            //services.AddAuthentication()
+            //    .AddCookie(options => {
+            //        options.LoginPath = "/Account/Unauthorized/";
+            //        options.AccessDeniedPath = "/Account/Forbidden/";
+            //    });
 
             services.AddControllers();
         }
@@ -48,7 +48,7 @@ namespace JB.Integration.Api
 
             app.UseRouting();
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
             app.UseAuthorization();
             
 
